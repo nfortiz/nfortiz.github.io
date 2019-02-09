@@ -1,7 +1,8 @@
 .fondo-banner{
 	background-image: url("../img/banner.jpg");
 	background-size: 100% auto;
-	opacity: 0.6;
+	
+	color:white;
 }
 .footer {
 	background-color: #40474e;
