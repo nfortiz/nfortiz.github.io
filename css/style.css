@@ -1,3 +1,76 @@
+/*---Imports---*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+/*---Variables---*/
+:root {
+	--light-gray: #e9ecef;
+	--dark-gray: #6c757d;
+	--dark: #343a40;
+	--dark-purple: #4c3d6d;
+	--white: white;
+	--normal: 18px;
+	--font: 'Open Sans', sans-serif;;
+}
+
+/*---Styles---*/
+body {
+	font-family: var(--font);
+	font-size: var(--normal);
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font);
+}
+
+h3 {
+	font-weight: 700;
+	font-size: 0.9em;
+	margin: 0;
+}
+
+.header {
+	align-items: center;
+	color: var(--white);
+	background-color: var(--dark);
+	display: flex;
+	height: 60px;
+	justify-content: left;
+}
+
+.navbar{
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.navbar-nav {
+	display: flex;
+	list-style: none;
+
+}
+
+.nav-item {
+	
+}
+
+.nav-link{
+	color: var(--white);
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0 10px;
+}
+
+.hero-title {
+	font-size: 1.7em;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.hero-subtitle{
+	color: var(--dark-gray);
+	font-weight: 400;
+}
+
 .fondo-banner{
 
 	/*background-image: url("../img/banner.jpg");*/
