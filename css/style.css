@@ -1,9 +1,10 @@
 /*---Imports---*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 
 /*---Variables---*/
 :root {
 	--light-gray: #e9ecef;
+	--border-color: rgba(0,0,0,.125);
 	--dark-gray: #6c757d;
 	--dark: #343a40;
 	--dark-purple: #4c3d6d;
@@ -23,9 +24,14 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font);
 }
 
+h2 {
+	font-weight: 300;
+	font-size: 2.5rem;
+}
+
 h3 {
-	font-weight: 700;
-	font-size: 0.9em;
+	font-weight: 600;
+	font-size: 1.25em;
 	margin: 0;
 }
 
@@ -54,10 +60,6 @@ h3 {
 	display: flex;
 	list-style: none;
 
-}
-
-.nav-item {
-	
 }
 
 .nav-link{
@@ -90,49 +92,50 @@ h3 {
 }
 
 .hero-image {
-	border: 1px solid var(--dark-purple);
+	border: 2px solid #15C39A;
 	border-radius: 50%;
 	height: auto;
 	width: 200px;
 }
 
-.fondo-banner{
-
-	/*background-image: url("../img/banner.jpg");*/
-	background-color: rgba(0,0,0,0.8);
-	background-size: 100% auto;	
-	color:white;
-	/*opacity: 0.95;*/
-
+.skills {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .experiences {
 	display: flex;
+	flex-direction: column;
 }
 
-.experience {
-	background: #f4fbff;
-	border: 1px solid var(--dark-gray);
-	border-radius: 10px;
+.experience {	
+	border: 1px solid var(--border-color);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,.125);
 	display: inherit;
+	margin-bottom: 20px;
 	overflow: hidden;
 }
 
-.experience-details{
-	padding: 10px;
+.experience-details {
+	padding: 20px;
 	font-size: 1rem;
 }
 
-.experience-title{
+.experience-title {
 	font-size: 1.2em;
+	font-weight: 500;
+	margin: 0;
 }
 
-.experience-media{
-	align-items: center;
-	display: inherit;
+.experience-subtitle {
+	color: var(--dark-gray);
+	font-size: 0.9em;
+	margin: 0;
+}
+
+.experience-media {
 	margin: 0;
 	position: relative;
-	object-fit: cover;
 	width: 100%;
 	height: auto;
 }
@@ -141,8 +144,18 @@ h3 {
 	position: absolute;
 	top: 0;
 	bottom: 0;
+	right: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+.hobbies > * {
+	text-align: center;
+}
+
+.hobbies i {
+	color: #212529;
 }
 
 .footer {
@@ -156,4 +169,9 @@ h3 {
 	align-items: center;
 	display: inherit;
 	justify-content: inherit;
+}
+
+footer a {
+	color: white;
+	text-decoration: none;
 }
