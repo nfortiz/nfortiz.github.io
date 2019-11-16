@@ -81,7 +81,7 @@ h3 {
 }
 
 .hero-title {
-	font-size: 1.7em;
+	font-size: 1.8em;
 	font-weight: 300;
 	margin-bottom: 10px;
 }
@@ -96,6 +96,11 @@ h3 {
 	border-radius: 50%;
 	height: auto;
 	width: 200px;
+}
+
+.lead {
+	font-size: 1.2rem;
+	font-weight: 300;
 }
 
 .skills {
@@ -150,12 +155,55 @@ h3 {
 	height: 100%;
 }
 
+.list-academical {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.academical-item {
+	padding: 10px 15px;
+	border-bottom: 2px solid var(--light-gray);
+}
+
+.academical-item h3 {
+	color: var(--dark);
+	margin-top: 15px;
+}
+
+.text-muted {
+	color:	var(--dark-gray);
+}
+
 .hobbies > * {
 	text-align: center;
 }
 
-.hobbies i {
-	color: #212529;
+.hobbie {
+	color: var(--dark);
+	background: var(--light-gray);
+	border-radius: 5px;
+	margin: 10px;
+}
+
+.hobbie-icon {
+	margin: 5px;
+}
+
+.hobbie-icon > i {
+	background: white;
+	border: 2px solid var(--dark);
+	border-radius: 50%;
+	color: var(--dark);
+	height: 100px;
+	width: 100px;
+}
+
+.hobbie h3 {
+	background: rgba(0,0,0,0.25);
+	color: white;
+	margin: 0 50px;
+    border-radius: 50px;
 }
 
 .footer {
