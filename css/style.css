@@ -92,7 +92,7 @@ h3 {
 }
 
 .hero-image {
-	border: 2px solid #15C39A;
+	border: 2px solid var(--light-gray);
 	border-radius: 50%;
 	height: auto;
 	width: 200px;
@@ -101,6 +101,31 @@ h3 {
 .lead {
 	font-size: 1.2rem;
 	font-weight: 300;
+}
+
+.social-link {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-size: 50px 50px;
+}
+
+.twitter {
+	background-image: url('../img/icons/twitter.svg');
+	background-size: 40px 40px;
+}
+
+.linkedin {
+	color: white;
+	background-image: url('../img/icons/linkedin.svg');
+}
+
+.github {
+	background-image: url('../img/icons/github.svg');
+}
+
+.mail {
+	background-image: url('../img/icons/mail.svg');
 }
 
 .skills {
@@ -182,7 +207,6 @@ h3 {
 .hobbie {
 	color: var(--dark);
 	background: var(--light-gray);
-	border-radius: 5px;
 	margin: 10px;
 }
 
@@ -211,12 +235,12 @@ h3 {
 	color: white;
 	display: flex;
 	justify-content: space-between;
+	margin-top: 10px;
 }
 
 .footer > div {
 	align-items: center;
 	display: inherit;
-	justify-content: inherit;
 }
 
 footer a {
