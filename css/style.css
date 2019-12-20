@@ -112,11 +112,9 @@ h3 {
 
 .twitter {
 	background-image: url('../img/icons/twitter.svg');
-	background-size: 40px 40px;
 }
 
 .linkedin {
-	color: white;
 	background-image: url('../img/icons/linkedin.svg');
 }
 
@@ -159,8 +157,25 @@ h3 {
 
 .experience-subtitle {
 	color: var(--dark-gray);
-	font-size: 0.9em;
+	font-size: 1em;
 	margin: 0;
+}
+
+span.date {
+	background-color: var(--dark-gray);
+	border-radius: 10px;
+	color: white;
+	font-weight: normal;
+	font-size: 0.9em;
+	padding: 1px 15px;
+}
+
+.date-icon {
+	background-image: url('../img/icons/mail.svg');
+	background-size: 20px 20px;
+	background-position: 0 0;
+	width: 20px;
+	height: 20px;
 }
 
 .experience-media {
@@ -188,7 +203,7 @@ h3 {
 
 .academical-item {
 	padding: 10px 15px;
-	border-bottom: 2px solid var(--light-gray);
+	border-bottom: 1px solid var(--light-gray);
 }
 
 .academical-item h3 {
