@@ -144,6 +144,40 @@ h3 {
 	flex-wrap: wrap;
 }
 
+.skill-title {
+	font-family: 400;
+}
+
+.skill-list {
+	list-style: none;
+	padding-left: 15px;
+}
+
+.skill-list.programming-languages {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skill {
+	border: 1px var(--dark-gray) solid;
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-weight: 300;
+	margin-bottom: 15px;
+	padding: 10px 15px;
+}
+
+.languages > .skill {	
+	border-left: 4px solid #472c09;	
+	max-width: 80%;
+}
+
+.programming-languages > .skill {
+	border-left: 4px solid #38896C;
+	margin-right: 15px;
+	width: auto;
+}
+
 .experiences {
 	display: flex;
 	flex-direction: column;
@@ -275,4 +309,28 @@ span.date {
 footer a {
 	color: white;
 	text-decoration: none;
+}
+
+@media screen and (max-width: 767px){
+	.languages > .skill {	
+		border-left: 4px solid #472c09;	
+		width: 50%;
+	}
+	
+	span.date {
+		display: inline-block;
+		width: auto;
+	}
+
+	.hobbies {
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hobbie {
+		margin: 10px auto;
+		max-width: 75%;
+	}
 }
