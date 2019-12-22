@@ -51,6 +51,24 @@ h3 {
 	justify-content: left;
 }
 
+.burger-button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,0.5);
+	background-image: url('../img/icons/menu.svg');
+	background-size: 35px 35px;
+	background-position: center;
+	display: none;
+	line-height: 40px;
+	text-align: center;
+	position: fixed;
+	z-index: 5;
+	left: 6px;
+	top : 6px;
+	color: white;  
+  }
+
 .navbar{
 	margin-left: auto;
 	margin-right: 10px;
@@ -213,6 +231,7 @@ span.date {
 	background-color: var(--dark-gray);
 	border-radius: 10px;
 	color: white;
+	display: inline-block;
 	font-weight: normal;
 	font-size: 0.9em;
 	padding: 1px 15px;
@@ -311,15 +330,49 @@ footer a {
 	text-decoration: none;
 }
 
+@media screen and (max-width: 900px){
+	.hobbie {
+		margin: 10px auto;
+		max-width: 75%;
+	}
+}
+
 @media screen and (max-width: 767px){
+	.burger-button {
+		color: white;
+		display: block;
+	}
+
+	.navbar {
+		background: rgba(5, 111, 255, 0.95);
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		left: -100vw;
+		bottom: 0;
+		width: 75vw;
+		justify-content: center;
+		align-items: center;
+		transition: 0.3s;
+	}
+		
+	.navbar.is-active{
+		left: 0;
+	}
+
+	.navbar-nav {
+		flex-direction: column;
+		font-size: 1.5rem;
+		margin-top: 50px;
+	}
+
+	.nav-item {
+		margin-bottom: 20px;
+	}
+
 	.languages > .skill {	
 		border-left: 4px solid #472c09;	
 		width: 50%;
-	}
-	
-	span.date {
-		display: inline-block;
-		width: auto;
 	}
 
 	.hobbies {
@@ -332,5 +385,11 @@ footer a {
 	.hobbie {
 		margin: 10px auto;
 		max-width: 75%;
+	}
+}
+
+@media screen and (max-width: 600px){ 
+	.experience-media {
+		display: none;
 	}
 }
