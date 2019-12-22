@@ -126,6 +126,19 @@ h3 {
 	background-image: url('../img/icons/mail.svg');
 }
 
+.location {
+	display: flex;
+    align-items: center;
+}
+
+.location-icon {
+	background: url('../img/icons/location.svg') no-repeat;
+	background-size: 30px 30px;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+
 .skills {
 	display: flex;
 	flex-wrap: wrap;
@@ -145,8 +158,9 @@ h3 {
 }
 
 .experience-details {
-	padding: 20px;
 	font-size: 1rem;
+	padding: 20px;
+	width: 100%;
 }
 
 .experience-title {
