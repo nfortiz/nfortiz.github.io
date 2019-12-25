@@ -1,13 +1,395 @@
-.fondo-banner{
+/*---Imports---*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 
-	/*background-image: url("../img/banner.jpg");*/
-	background-color: rgba(0,0,0,0.8);
-	background-size: 100% auto;	
-	color:white;
-	/*opacity: 0.95;*/
+/*---Variables---*/
+:root {
+	--light-gray: #e9ecef;
+	--border-color: rgba(0,0,0,.125);
+	--dark-gray: #6c757d;
+	--dark: #343a40;
+	--dark-purple: #4c3d6d;
+	--white: white;
+	--normal: 16px;
+	--font: 'Open Sans', sans-serif;;
+}
+
+/*---general Styles---*/
+body {
+	font-family: var(--font);
+	font-size: var(--normal);
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font);
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+/*------Classes---*/
+.header {
+	align-items: center;
+	color: var(--white);
+	background-color: var(--dark);
+	display: flex;
+	height: 60px;
+	justify-content: left;
+}
+
+.burger-button {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,0.5);
+	background-image: url('../img/icons/menu.svg');
+	background-size: 35px 35px;
+	background-position: center;
+	display: none;
+	line-height: 40px;
+	text-align: center;
+	position: fixed;
+	z-index: 5;
+	left: 6px;
+	top : 6px;
+	color: white;  
+  }
+
+.navbar{
+	margin-left: auto;
+	margin-right: 10px;
+}
+
+.navbar-nav {
+	display: flex;
+	list-style: none;
 
 }
+
+.nav-link{
+	color: var(--white);
+	font-size: 0.9em;
+	text-decoration: none;
+	padding: 0 10px;
+}
+
+
+.hero {
+	background: rgba(0,0,0,0.8);
+	color: var(--white);
+	width: 100%;
+}
+
+.hero .container {
+	background: rgba(0, 0, 0, 0.15)
+}
+
+.hero-title {
+	font-size: 1.8em;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.hero-subtitle{
+	color: var(--dark-gray);
+	font-weight: 400;
+}
+
+.hero-image {
+	border: 2px solid var(--light-gray);
+	border-radius: 50%;
+	height: auto;
+	width: 200px;
+}
+
+.lead {
+	font-size: 1.2rem;
+	font-weight: 300;
+}
+
+.social-link {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-size: 50px 50px;
+}
+
+.twitter {
+	background-image: url('../img/icons/twitter.svg');
+}
+
+.linkedin {
+	background-image: url('../img/icons/linkedin.svg');
+}
+
+.github {
+	background-image: url('../img/icons/github.svg');
+}
+
+.mail {
+	background-image: url('../img/icons/mail.svg');
+}
+
+.location {
+	display: flex;
+    align-items: center;
+}
+
+.location-icon {
+	background: url('../img/icons/location.svg') no-repeat;
+	background-size: 30px 30px;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skill-title {
+	font-family: 400;
+}
+
+.skill-list {
+	list-style: none;
+	padding-left: 15px;
+}
+
+.skill-list.programming-languages {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skill {
+	border: 1px var(--dark-gray) solid;
+	border-radius: 5px;
+	box-sizing: border-box;
+	font-weight: 300;
+	margin-bottom: 15px;
+	padding: 10px 15px;
+}
+
+.languages > .skill {	
+	border-left: 4px solid #472c09;	
+	max-width: 80%;
+}
+
+.programming-languages > .skill {
+	border-left: 4px solid #38896C;
+	margin-right: 15px;
+	width: auto;
+}
+
+.experiences {
+	display: flex;
+	flex-direction: column;
+}
+
+.experience {	
+	border: 1px solid var(--border-color);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,.125);
+	display: inherit;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.experience-details {
+	font-size: 1rem;
+	padding: 20px;
+	width: 100%;
+}
+
+.experience-title {
+	font-size: 1.2em;
+	font-weight: 500;
+	margin: 0;
+}
+
+.experience-subtitle {
+	color: var(--dark-gray);
+	font-size: 1em;
+	margin: 0;
+}
+
+span.date {
+	background-color: var(--dark-gray);
+	border-radius: 10px;
+	color: white;
+	display: inline-block;
+	font-weight: normal;
+	font-size: 0.9em;
+	padding: 1px 15px;
+}
+
+.date-icon {
+	background-image: url('../img/icons/mail.svg');
+	background-size: 20px 20px;
+	background-position: 0 0;
+	width: 20px;
+	height: 20px;
+}
+
+.experience-media {
+	margin: 0;
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.experience-media > * {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.list-academical {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.academical-item {
+	padding: 10px 15px;
+	border-bottom: 1px solid var(--light-gray);
+}
+
+.academical-item h3 {
+	color: var(--dark);
+	margin-top: 15px;
+}
+
+.text-muted {
+	color:	var(--dark-gray);
+}
+
+.hobbies > * {
+	text-align: center;
+}
+
+.hobbie {
+	color: var(--dark);
+	background: var(--light-gray);
+	margin: 10px;
+}
+
+.hobbie-icon {
+	margin: 5px;
+}
+
+.hobbie-icon > i {
+	background: white;
+	border: 2px solid var(--dark);
+	border-radius: 50%;
+	color: var(--dark);
+	height: 100px;
+	width: 100px;
+}
+
+.hobbie h3 {
+	background: rgba(0,0,0,0.25);
+	color: white;
+	margin: 0 50px;
+    border-radius: 50px;
+}
+
 .footer {
 	background-color: #40474e;
 	color: white;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+}
+
+.footer > div {
+	align-items: center;
+	display: inherit;
+}
+
+footer a {
+	color: white;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 900px){
+	.hobbie {
+		margin: 10px auto;
+		max-width: 75%;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.burger-button {
+		color: white;
+		display: block;
+	}
+
+	.navbar {
+		background: rgba(5, 111, 255, 0.95);
+		position: fixed;
+		z-index: 4;
+		top: 0;
+		left: -100vw;
+		bottom: 0;
+		width: 75vw;
+		justify-content: center;
+		align-items: center;
+		transition: 0.3s;
+	}
+		
+	.navbar.is-active{
+		left: 0;
+	}
+
+	.navbar-nav {
+		flex-direction: column;
+		font-size: 1.5rem;
+		margin-top: 50px;
+	}
+
+	.nav-item {
+		margin-bottom: 20px;
+	}
+
+	.languages > .skill {	
+		border-left: 4px solid #472c09;	
+		width: 50%;
+	}
+
+	.hobbies {
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hobbie {
+		margin: 10px auto;
+		max-width: 75%;
+	}
+}
+
+@media screen and (max-width: 600px){ 
+	.experience-media {
+		display: none;
+	}
 }
