@@ -193,7 +193,7 @@ h3 {
 }
 
 .programming-languages > .skill {
-	border-left: 4px solid #38896C;
+	border-left: 4px solid var(--dark-green);
 	margin-right: 15px;
 	width: auto;
 }
@@ -247,7 +247,19 @@ span.date {
 	height: 20px;
 }
 
+.experience-description {
+	padding: 0;
+}
+
+.experience-description li {
+	border-left: 2px solid var(--light-green);
+	list-style: none;
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
 .experience-media {
+	background-color: #1e1204;
 	margin: 0;
 	position: relative;
 	width: 100%;
@@ -255,6 +267,7 @@ span.date {
 }
 
 .experience-media > * {
+	object-fit: contain;
 	position: absolute;
 	top: 0;
 	bottom: 0;
