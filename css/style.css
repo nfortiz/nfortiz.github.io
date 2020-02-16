@@ -10,7 +10,9 @@
 	--dark-purple: #4c3d6d;
 	--white: white;
 	--normal: 16px;
-	--font: 'Open Sans', sans-serif;;
+	--font: 'Open Sans', sans-serif;
+	--dark-green: #005134;
+	--light-green: #38896C;
 }
 
 /*---general Styles---*/
@@ -25,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	font-weight: 300;
+	font-weight: 500;
 	font-size: 2.5rem;
 }
 
