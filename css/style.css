@@ -45,12 +45,18 @@ h3 {
 
 /*------Classes---*/
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
 	align-items: center;
 	color: var(--white);
 	background-color: var(--dark);
 	display: flex;
 	height: 60px;
+	width: 100%;
 	justify-content: left;
+	z-index: 100;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,.125);
 }
 
 .burger-button {
@@ -91,6 +97,7 @@ h3 {
 
 
 .hero {
+	margin-top: 60px;
 	background: rgba(0,0,0,0.8);
 	color: var(--white);
 	width: 100%;
@@ -251,11 +258,18 @@ span.date {
 	padding: 0;
 }
 
-.experience-description li {
-	border-left: 2px solid var(--light-green);
+.experience-description li {	
 	list-style: none;
 	margin-bottom: 10px;
-	padding-left: 10px;
+	padding-left: 15px;
+}
+
+.experience-description li::before {
+	content: "|";
+	margin-right: 5px;
+	margin-left: -15px;
+	font-weight: 900;
+	color: var(--light-green);
 }
 
 .experience-media {
