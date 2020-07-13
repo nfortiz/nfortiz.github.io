@@ -13,6 +13,8 @@
 	--font: 'Open Sans', sans-serif;
 	--dark-green: #005134;
 	--light-green: #38896C;
+	--dark-blue: #2A4365;
+	--light-blue: #2B6CB0;
 }
 
 /*---general Styles---*/
@@ -265,7 +267,7 @@ span.date {
 }
 
 .experience-description li::before {
-	content: "|";
+	content: "*";
 	margin-right: 5px;
 	margin-left: -15px;
 	font-weight: 900;
@@ -298,18 +300,106 @@ span.date {
 }
 
 .academical-item {
-	padding: 10px 15px;
-	border-bottom: 1px solid var(--light-gray);
+	padding: 10px 20px;
+	padding-left: 40px;
+	min-height: 100px;
+	position: relative;
 }
 
-.academical-item h3 {
+.academical-description {
+	display: inline;
+}
+
+.academical-description h3 {
 	color: var(--dark);
 	margin-top: 15px;
 }
 
+.academical-line {
+	width: 10px;
+	height: 100%;
+	background-color: white;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.academical-line span {
+	--badge-height: 40px;
+	background-image: url(../img/icons/graduation.svg);	
+	border-radius: 5px;
+	height: var(--badge-height);
+	width: var(--badge-height);
+	display: inline-block;
+	position: relative;
+	left: 0;
+	top: calc(50% - var(--badge-height) / 2);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: calc(var(--badge-height) * 0.7);
+}
+
+/* .academical-line span {
+	--badge-height: 40px;
+	background-color: purple;	
+	border-radius: 5px;
+	height: var(--badge-height);
+	width: calc(var(--badge-height) * 0.65);
+	display: inline-block;
+	position: relative;
+	left: 0;
+	top: calc(50% - var(--badge-height) / 2);
+}
+
+.academical-line span::before, .academical-line span::after {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	border-radius: inherit;
+	background-color: inherit;	
+	content: "";
+}
+
+.academical-line span::before {
+	transform: rotate(60deg);
+}
+
+.academical-line span::after {
+	transform: rotate(-60deg);
+}
+ */
 .text-muted {
 	color:	var(--dark-gray);
 }
+
+.project {
+	border: 1px solid var(--border-color);
+	border-left: 5px solid var(--dark-green);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,.125);
+	padding: 20px;
+	overflow: hidden;
+}
+
+.project__links {
+	display: flex;
+	flex-wrap: wrap;
+	flex-shrink: 0;	
+}
+
+.project__links > a{
+	background-color: var(--light-blue);
+	color: var(--white);
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 4px;
+	border-bottom: 5px solid var(--dark-blue);
+	border-right: 4px solid var(--dark-blue);
+	transition:  200ms;
+}
+
 
 .hobbies > * {
 	text-align: center;
@@ -319,6 +409,8 @@ span.date {
 	color: var(--dark);
 	background: var(--light-gray);
 	margin: 10px;
+	padding: 10px;
+
 }
 
 .hobbie-icon {
