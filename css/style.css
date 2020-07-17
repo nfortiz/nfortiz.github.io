@@ -376,28 +376,45 @@ span.date {
 
 .project {
 	border: 1px solid var(--border-color);
-	border-left: 5px solid var(--dark-green);
+	border-top: 5px solid var(--dark-green);
 	box-shadow: 5px 5px 5px 0px rgba(0,0,0,.125);
 	padding: 20px;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 .project__links {
 	display: flex;
 	flex-wrap: wrap;
 	flex-shrink: 0;	
+	margin-top: auto;
 }
 
-.project__links > a{
-	background-color: var(--light-blue);
-	color: var(--white);
+.project__links > *:first-child {
+	margin-right: 15px;
+}
+
+.project__links > a {	
 	padding: 10px 20px;
 	text-decoration: none;
 	font-weight: bold;
 	border-radius: 4px;
+	transition:  200ms;
+}
+
+.project__links--code {
+	background-color: var(--light-blue);
+	color: var(--white);
 	border-bottom: 5px solid var(--dark-blue);
 	border-right: 4px solid var(--dark-blue);
-	transition:  200ms;
+}
+
+.project__links--demo {
+	background-color: var(--light-gray);
+	color: black;
+	border-bottom: 5px solid var(--dark-gray);
+	border-right: 4px solid var(--dark-gray);
 }
 
 
@@ -436,9 +453,8 @@ span.date {
 .footer {
 	background-color: #40474e;
 	color: white;
-	display: flex;
-	justify-content: space-between;
-	margin-top: 10px;
+	margin-top: 20px;
+	width: 100vw;
 }
 
 .footer > div {
