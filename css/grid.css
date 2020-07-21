@@ -47,9 +47,13 @@
     display: inherit;
   }
 
-  .col-1, .col-3, .col-4, .col-6, .col-8, .col-12{
-    grid-column-end: span 12;
+  .col-1, .col-3, .col-4, .col-6 {
+    grid-column-end: span 6;
   } 
+  
+  .col-8, .col-12 {
+    grid-column-end: span 12;
+  }
   
   .container {
     padding-left: 15px;

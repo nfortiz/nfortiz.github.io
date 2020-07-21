@@ -6,6 +6,7 @@
 	--light-gray: #e9ecef;
 	--border-color: rgba(0,0,0,.125);
 	--dark-gray: #6c757d;
+	--gray: #CBD5E0;
 	--dark: #343a40;
 	--dark-purple: #4c3d6d;
 	--white: white;
@@ -378,14 +379,47 @@ span.date {
 	border: 1px solid var(--border-color);
 	border-top: 5px solid var(--dark-green);
 	box-shadow: 5px 5px 5px 0px rgba(0,0,0,.125);
-	padding: 20px;
+	
 	overflow: hidden;
+	box-sizing: initial;
+
+}
+
+.project__img {
+	margin: 0;
+	width: 100%;
+	position: relative;
+	padding-top: 56.25%;
+}
+
+.project__img img {
+	filter: grayscale(60%) blur(1px);
+	transition: filter 600ms;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.project:hover .project__img img {
+	filter: none;
+}
+
+.project__content {
 	display: flex;
 	flex-direction: column;
+	padding: 20px;
+}
+
+.project__content h3{
+	text-align: center;
 }
 
 .project__links {
 	display: flex;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	flex-shrink: 0;	
 	margin-top: auto;
@@ -396,25 +430,23 @@ span.date {
 }
 
 .project__links > a {	
-	padding: 10px 20px;
+	text-align: center;
+	padding: 10px 40px;
+	flex-grow: 1;
 	text-decoration: none;
 	font-weight: bold;
-	border-radius: 4px;
+	border-radius: 20px;
 	transition:  200ms;
 }
 
 .project__links--code {
 	background-color: var(--light-blue);
 	color: var(--white);
-	border-bottom: 5px solid var(--dark-blue);
-	border-right: 4px solid var(--dark-blue);
 }
 
 .project__links--demo {
-	background-color: var(--light-gray);
+	background-color: var(--gray);
 	color: black;
-	border-bottom: 5px solid var(--dark-gray);
-	border-right: 4px solid var(--dark-gray);
 }
 
 
@@ -427,7 +459,6 @@ span.date {
 	background: var(--light-gray);
 	margin: 10px;
 	padding: 10px;
-
 }
 
 .hobbie-icon {
