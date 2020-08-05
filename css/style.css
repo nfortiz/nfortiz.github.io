@@ -319,7 +319,7 @@ span.date {
 .academical-line {
 	width: 10px;
 	height: 100%;
-	background-color: white;
+	background-color: var(--dark);
 	display: inline-block;
 	position: absolute;
 	top: 0;
@@ -328,18 +328,30 @@ span.date {
 }
 
 .academical-line span {
-	--badge-height: 40px;
-	background-image: url(../img/icons/graduation.svg);	
-	border-radius: 5px;
+	--badge-height: 30px;
+	border-radius: 50%;
+	background-color: var(--dark);	
 	height: var(--badge-height);
 	width: var(--badge-height);
 	display: inline-block;
 	position: relative;
-	left: 0;
+	left: -10px;
 	top: calc(50% - var(--badge-height) / 2);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: calc(var(--badge-height) * 0.7);
+}
+
+.academical-line span::after {
+	content: '';
+	position: absolute;
+	background-image: url(../img/icons/graduation.svg);
+	background-size: contain;
+	top: 5px;
+	left: 5px;
+	height: calc(var(--badge-height) - 10px);
+	width: calc(var(--badge-height) - 10px);
+
 }
 
 /* .academical-line span {
